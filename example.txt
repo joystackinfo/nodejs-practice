@@ -1,0 +1,6 @@
+Hello, this is a sample text file for your mini file system!
+You can write anything here: notes, ideas, reminders, or even
+a short story. Each line is stored just like a normal file
+so your file system can read it and display it when needed.
+
+Have fun building your FS! 🚀
