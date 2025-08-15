@@ -4,3 +4,13 @@ a short story. Each line is stored just like a normal file
 so your file system can read it and display it when needed.
 
 Have fun building your FS! 🚀
+
+
+
+
+
+
+JOY_PRO_DEV@DESKTOP-802T0G0 MINGW64 ~/Desktop (main)
+$ git add .
+warning: adding embedded git repository: Desktop/NODE JS
+s
