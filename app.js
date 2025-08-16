@@ -6,6 +6,7 @@ const url =require('url')
 const crypto=require('crypto')
 const sayHello = require ('./greetings')
 const math=require('./math')
+const lodash= require('lodash');
 
 //fs.readFile('example.txt', 'utf8', (err, data) => {
 //  if (err) {
@@ -51,7 +52,26 @@ const math=require('./math')
 //hash.update('Hello, NodeJs')//the message to update
 //console.log(hash.digest('hex'))//to finalize
 
-const message= sayHello('DEVELOPER')
-console.log(message);
-console.log(math.add (4,9));
-console.log(math.multiply(4,7))
+//const message= sayHello('DEVELOPER')
+//console.log(message);
+//console.log(math.add (4,9));
+//console.log(math.multiply(4,7))
+
+
+  //onst numbers = [1, 2, 3, 4, 5];
+  // const reversed = lodash.reverse(numbers);
+  //console.log(reversed);
+
+
+const readablestream =fs.createReadStream('example.txt', {encoding: 'utf8'})
+readablestream.on('data' ,(chunk) => {
+  console.log(chunk);//to readthe file in chunks
+})
+
+readablestream.on('end', () => {
+  console.log('Finished reading file');//to execute the command
+});
+
+readablestream.on('error', (err) => {
+  console.error('Error', err);
+});
