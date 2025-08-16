@@ -77,11 +77,20 @@ const crypto=require('crypto')
 // });
 
 
- WritableStream=fs.createWriteStream('output2.txt' )
- WritableStream.write('I love node .js');
- WritableStream.write('Hello Node.js');
- WritableStream.end();
+//  WritableStream=fs.createWriteStream('output2.txt' )
+//  WritableStream.write('I love node .js');
+//  WritableStream.write('Hello Node.js');
+//  WritableStream.end();
 
- WritableStream.on('finish', () => {
-   console.log('Finished writing file');
- });
+//  WritableStream.on('finish', () => {
+//    console.log('Finished writing file');
+//  });
+
+
+const readablestream=fs.createReadStream('example.txt') //to create a readable stream
+
+const WritableStream=fs.createWriteStream('example-output.txt') //to create a writable stream
+readablestream.pipe(WritableStream); // to pipe both readable and writable streams
+WritableStream.on('finish', () => {
+    console.log('File copied successfully');  // to indicate successful copy
+});
