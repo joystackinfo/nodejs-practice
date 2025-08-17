@@ -120,5 +120,17 @@ const crypto=require('crypto')
 // })
  
 
-fs.mkdirSync('new directory 2') // to create a new directory using synchronous method
-console.log('successfully created directory 2.0'); // to indicate a successfully creation
+// fs.mkdirSync('new directory 2') // to create a new directory using synchronous method
+// console.log('successfully created directory 2.0'); // to indicate a successfully creation
+
+
+fs.readdir('./' ,(err, files) =>  {// to read the current directory)
+    if (err) {
+        return console.error('Error reading directory:', err); // to indicate error
+    }
+    console.log('Directory contents:', files); // to log the contents of the directory
+});
+
+//USING SYNCHRONOUS ;
+    const files = fs.readdirSync('./');
+    console.log('Directory contents:', files);
