@@ -87,10 +87,34 @@ const crypto=require('crypto')
 //  });
 
 
-const readablestream=fs.createReadStream('example.txt') //to create a readable stream
+// const readablestream=fs.createReadStream('example.txt') //to create a readable stream
 
-const WritableStream=fs.createWriteStream('example-output.txt') //to create a writable stream
-readablestream.pipe(WritableStream); // to pipe both readable and writable streams
-WritableStream.on('finish', () => {
-    console.log('File copied successfully');  // to indicate successful copy
-});
+// const WritableStream=fs.createWriteStream('example-output.txt') //to create a writable stream
+// readablestream.pipe(WritableStream); // to pipe both readable and writable streams
+// WritableStream.on('finish', () => {
+//     console.log('File copied successfully');  // to indicate successful copy
+// });
+
+  
+
+// const readline=require('readline')
+
+// const readablestream=fs.createReadStream('example.txt') //to create the readable stream
+
+// const rl =readline.createInterface({input: readablestream}) // to create the readline interface
+// rl.on('line', (line) => {
+//     console.log('line:', line) // to read the line from the file
+// });
+
+// rl.on('close', () => {
+//     console.log('Finished processing file'); // to indicate successful processing
+// });
+
+
+fs.mkdir('new-directory', (err) => {  //to create a new directory
+    if (err) {
+        console.error('Error creating directory:', err); // to indicate error
+        return;
+    }
+    console.log('Directory created successfully'); // to indicate successful creation
+})
