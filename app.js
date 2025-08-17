@@ -111,10 +111,14 @@ const crypto=require('crypto')
 // });
 
 
-fs.mkdir('new-directory', (err) => {  //to create a new directory
-    if (err) {
-        console.error('Error creating directory:', err); // to indicate error
-        return;
-    }
-    console.log('Directory created successfully'); // to indicate successful creation
-})
+// fs.mkdir('new-directory', (err) => {  //to create a new directory
+//     if (err) {
+//         console.error('Error creating directory:', err); // to indicate error
+//         return;
+//     }
+//     console.log('Directory created successfully'); // to indicate successful creation
+// })
+ 
+
+fs.mkdirSync('new directory 2') // to create a new directory using synchronous method
+console.log('successfully created directory 2.0'); // to indicate a successfully creation
