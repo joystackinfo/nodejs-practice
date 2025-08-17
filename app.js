@@ -142,7 +142,15 @@ const crypto=require('crypto')
     //     console.log('Directory does not exists'); // to indicate directory does not exists
     // }
 
-fs.rmdir('new directory ', (err) => { // to remove the directory
+// fs.rmdir('newdirectory', (err) => { // to remove the directory
+//     if (err) {
+//         return console.error('Error removing directory:', err); // to indicate error
+//     }
+//     console.log('Directory removed successfully'); // to indicate successful removal
+// });
+
+
+fs.rm('new directory 2', { recursive: true }, (err) => { // to remove the directory
     if (err) {
         return console.error('Error removing directory:', err); // to indicate error
     }
