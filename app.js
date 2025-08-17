@@ -150,9 +150,31 @@ const crypto=require('crypto')
 // });
 
 
-fs.rm('new directory 2', { recursive: true }, (err) => { // to remove the directory
-    if (err) {
-        return console.error('Error removing directory:', err); // to indicate error
+// fs.rm('new directory 2', { recursive: true }, (err) => { // to remove the directory
+//     if (err) {
+//         return console.error('Error removing directory:', err); // to indicate error
+//     }
+//     console.log('Directory removed successfully'); // to indicate successful removal
+// });
+
+//  fs.rename('directory 1.0' , 'directory 2.0' , (err) => {
+//     if (err){
+//         console.log('Error renaming directory:', err);
+//     }
+//       console.log('Directory renamed successfully');
+//  })
+
+//  fs.stat('./' , (err, stats) => {
+//      if (err) {
+//         return console.error('Error getting directory stats:', err);
+//      }
+//        console.log('Directory stats:', stats);
+//        console.log('is directory:', stats.isDirectory());
+//     });
+
+fs.watch('./', (eventType, filename) => {
+    console.log(`event: ${eventType}`);
+    if (filename) {
+        console.log(`Filename: ${filename}`);
     }
-    console.log('Directory removed successfully'); // to indicate successful removal
 });
