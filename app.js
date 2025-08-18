@@ -178,3 +178,21 @@ const crypto=require('crypto')
 //         console.log(`Filename: ${filename}`);
 //     }
 // });
+
+
+
+
+const EventEmitter = require('events');
+
+const emitter = new EventEmitter() 
+  //registering a event listener
+
+   emitter.on('test1', ()=>{
+    console.log('an event has occured in test 1');
+  })
+
+  emitter.on('test1', ()=>{
+    console.log('an event has occured in test 2');
+  })
+
+  emitter.emit('test1');
