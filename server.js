@@ -1,22 +1,33 @@
 const http = require('http');
 const url = require('url');
 
+
+//route handler,
+
+
+const route={
+    '/':(req,res) => {
+        res.writeHead(200, {'Content-Type': 'text/plain'});
+        res.end('Welcome to the home page')
+    },
+       '/about':(req,res) => {
+        res.writeHead(200, {'Content-Type': 'text/plain'});
+        res.end('This is the about home page')
+}, 
+      '/not found':(req,res) => {
+        res.writeHead(200, {'Content-Type': 'text/plain'});
+        res.end('homepage not found') 
+      }
+    }    
+
 const server = http.createServer((req, res) => {
-    if (req.method === 'GET' && req.url.startsWith('/search')) {
-
-        const queryObject = url.parse(req.url, true).query
-
-        res.writeHead(200, {
-            "Content-Type":'application/json',
-            "custom-header":'Node js server',
-            "custom-tracking":'1234',
-        })
-        res.end(JSON.stringify({ message:'query received', queryObject }))
-
-    } else {
-        res.writeHead(404, { 'Content-Type': 'text/plain' })
-        res.end('Route not found')
-    }
+    const { pathname } = url.parse(req.url);
+        if (route[pathname]) {
+              route[pathname](req,res)
+            
+        } else {
+            route['/not found'](req, res);
+        }
 });
 
 const PORT = 3000;
