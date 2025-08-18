@@ -1,57 +1,30 @@
 const http = require('http');
-const url = require('url');
-
-
-//route handler,
-
-
-const route={
-    '/':(req,res) => {
-        res.writeHead(200, {'Content-Type': 'text/plain'});
-        res.end('Welcome to the home page')
-    },
-       '/about':(req,res) => {
-        res.writeHead(200, {'Content-Type': 'text/plain'});
-        res.end('This is the about home page')
-}, 
-      '/not found':(req,res) => {
-        res.writeHead(200, {'Content-Type': 'text/plain'});
-        res.end('homepage not found') 
-      }
-    }    
+const querystring = require('querystring');
 
 const server = http.createServer((req, res) => {
-    const { pathname } = url.parse(req.url);
-        if (route[pathname]) {
-              route[pathname](req,res)
-            
-        } else {
-            route['/not found'](req, res);
-        }
+    if (req.method === 'POST' && req.url === '/submit') {
+        let data = '';
+
+        // ✅ should be req.on, not res.on
+        req.on('data', (chunk) => {
+            data += chunk;
+        });
+
+        req.on('end', () => {
+            const parsedData = querystring.parse(data);
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({
+                message: "Form data received",
+                parsedData
+            }));
+        });
+    } else {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end("Route not found");
+    }
 });
 
 const PORT = 3000;
 server.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
