@@ -6,8 +6,12 @@ const server = http.createServer((req, res) => {
 
         const queryObject = url.parse(req.url, true).query
 
-        res.writeHead(200, { "Content-Type": 'application/json' })
-        res.end(JSON.stringify({ message:'query received',queryObject }))
+        res.writeHead(200, {
+            "Content-Type":'application/json',
+            "custom-header":'Node js server',
+            "custom-tracking":'1234',
+        })
+        res.end(JSON.stringify({ message:'query received', queryObject }))
 
     } else {
         res.writeHead(404, { 'Content-Type': 'text/plain' })
