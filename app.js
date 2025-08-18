@@ -172,9 +172,9 @@ const crypto=require('crypto')
 //        console.log('is directory:', stats.isDirectory());
 //     });
 
-fs.watch('./', (eventType, filename) => {
-    console.log(`event: ${eventType}`);
-    if (filename) {
-        console.log(`Filename: ${filename}`);
-    }
-});
+// fs.watch('./', (eventType, filename) => {
+//     console.log(`event: ${eventType}`);
+//     if (filename) {
+//         console.log(`Filename: ${filename}`);
+//     }
+// });
