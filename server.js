@@ -1,25 +1,25 @@
-const http = require('http'); // to get the http module
- 
+const http = require('http');
+const url = require('url');
+
 const server = http.createServer((req, res) => {
-    if (req.method === 'POST' && req.url === '/submit') { // to check if the method is post and url is submit
-           let body = ''; // to store the incoming data
-           req.on('data', chunk => {
-               body += chunk.toString(); // convert it to string
-           });
-           req.on('end', () => {
-               console.log('Received data:', body); // to log the received data
-               res.writeHead(200, { 'content-type': 'application/json' }); // to set the response header
-               res.end(JSON.stringify({ message: 'Data received' }));  // to send the response
-           });
+    if (req.method === 'GET' && req.url.startsWith('/search')) {
+
+        const queryObject = url.parse(req.url, true).query
+
+        res.writeHead(200, { "Content-Type": 'application/json' })
+        res.end(JSON.stringify({ message:'query received',queryObject }))
+
     } else {
-        res.writeHead(404, { 'content-type': 'text/plain' });
-        res.end('route not found');
+        res.writeHead(404, { 'Content-Type': 'text/plain' })
+        res.end('Route not found')
     }
-})
+});
+
 const PORT = 3000;
 server.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`) //to indicate success
-})
+    console.log(`Server running at http://localhost:${PORT}`);
+});
+
 
 
 
