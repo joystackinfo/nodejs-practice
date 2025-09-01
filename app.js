@@ -24,7 +24,9 @@
 //     console.log('File written successfully');
 // });
 
-const server=http.createServer((req,res) => {
+// CREATE A HTTP SERVER IN THE NODE JS
+
+const server=http.createServer((req,res) => { 
     res.statusCode=200
     res.setHeader('content-type' , 'text/plain')
     res.end('HELLO , NODE JS this is me trying out my new node js again and again')
