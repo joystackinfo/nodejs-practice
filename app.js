@@ -1,28 +1,28 @@
- const fs=require('fs')
- const http=require('http')
- const path = require('path')
- const os=require('os')
- const url =require('url')
-const crypto=require('crypto')
- const sayHello = require ('./greetings')
- const math=require('./math')
- const lodash= require('lodash');
+ //const fs=require('fs')
+ constnode  http=require('http')
+//  const path = require('path')
+//  const os=require('os')
+//  const url =require('url')
+// const crypto=require('crypto')
+//  const sayHello = require ('./greetings')
+//  const math=require('./math')
+//  const lodash= require('lodash');
 
-// //fs.readFile('example.txt', 'utf8', (err, data) => {
-// //  if (err) {
-// //      console.error(err)
-// //      return;
-// //  }
-// //  console.log(data)
-// //});
+// fs.readFile('example.txt', 'utf8', (err, data) => {  // to read the file
+//   if (err) {
+//       console.error(err)  // to log errors
+//       return;
+//   }
+//   console.log(data)  // to log the file content
+// });
 
-// ///fs.writeFile('output.txt', 'Hello, NodeJs', (err) => {
-// //    if (err) {
-// //        console.error(err);
-// //        return;
-// //    }
-// //    console.log('File written successfully');
-// //});
+// fs.writeFile('output.txt', 'Hello, NodeJs', (err) => {
+//     if (err) {
+//         console.error(err);
+//         return;
+//     }
+//     console.log('File written successfully');
+// });
 
 // //const server=http.createServer((req,res) => {
 //     //res.statusCode=200
@@ -182,32 +182,32 @@ const crypto=require('crypto')
 
 
 
-const EventEmitter = require('events');
+// const EventEmitter = require('events');
 
-const emitter = new EventEmitter() 
-  //registering a event listener
+// const emitter = new EventEmitter() 
+//   //registering a event listener
 
-   emitter.on('test1', ()=>{
-    console.log('an event has occured in test 1');
-  })
+//    emitter.on('test1', ()=>{
+//     console.log('an event has occured in test 1');
+//   })
 
-  emitter.on('test1', ()=>{
-    console.log('an event has occured in test 2');
-  })
+//   emitter.on('test1', ()=>{
+//     console.log('an event has occured in test 2');
+//   })
 
-  emitter.emit('test1');
+//   emitter.emit('test1');
 
-  emitter.on('error', (err) => {
-    console.error('Error event emitted:', err.message);
-  });
+//   emitter.on('error', (err) => {
+//     console.error('Error event emitted:', err.message);
+//   });
 
 
-  try {
-emitter.emit('test1');
-  emitter.removeListener('test1');
-  emitter.emit('test1'); // this will not log anything because the listener has been removed
+//   try {
+// emitter.emit('test1');
+//   emitter.removeListener('test1');
+//   emitter.emit('test1'); // this will not log anything because the listener has been removed
     
-  } catch (error) {
-    emitter.emit('error', error) // emit an error event if any error occurs
-  }
+//   } catch (error) {
+//     emitter.emit('error', error) // emit an error event if any error occurs
+//   }
 
