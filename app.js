@@ -1,7 +1,7 @@
  //const fs=require('fs')
- constnode  http=require('http')
+ const   http=require('http')
 //  const path = require('path')
-//  const os=require('os')
+//  const os=require('os'
 //  const url =require('url')
 // const crypto=require('crypto')
 //  const sayHello = require ('./greetings')
@@ -24,14 +24,14 @@
 //     console.log('File written successfully');
 // });
 
-// //const server=http.createServer((req,res) => {
-//     //res.statusCode=200
-//     //res.setHeader('content-type' , 'text/plain')
-//     //res.end('HELLO , NODE JS')
-// //});
-// //server.listen(3000,() => {
-//     //console.log('Server running at http://localhost:3000/');
-// //});
+const server=http.createServer((req,res) => {
+    res.statusCode=200
+    res.setHeader('content-type' , 'text/plain')
+    res.end('HELLO , NODE JS this is me trying out my new node js again and again')
+});
+server.listen(3000,() => {
+    console.log('Server running at http://localhost:3000/');
+});
 
 // //const directory = '/user/local'
 // //const fileName = 'example.txt'
