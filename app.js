@@ -53,14 +53,16 @@ const crypto=require('crypto')
 // console.log('search params' ,myUrl.searchParams.get('query'));
 
 //CRYPTO
- const hash=crypto.createHash('sha256')
- hash.update('Hello, World!')
- console.log('Hash:', hash.digest('hex'));
+//  const hash=crypto.createHash('sha256')
+//  hash.update('Hello, World!')
+//  console.log('Hash:', hash.digest('hex'));
 
-// const message= sayHello('DEVELOPER')
-// console.log(message);
-// console.log(math.add (4,9));
-// //console.log(math.multiply(4,7))
+//EXPORTING MULTIPLE MUDOLES
+
+ const message= sayHello('DEVELOPER')
+ console.log(message);
+ console.log(math.add (4,9));
+console.log(math.multiply(4,7))
 
 
 //   //onst numbers = [1, 2, 3, 4, 5];
