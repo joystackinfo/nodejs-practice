@@ -1,8 +1,8 @@
  //const fs=require('fs')
 // const   http=require('http')
- const path = require('path')
-//  const os=require('os')
-//  const url =require('url')
+ //const path = require('path')
+ //const os=require('os')
+ const url =require('url')
 // const crypto=require('crypto')
 //  const sayHello = require ('./greetings')
 //  const math=require('./math')
@@ -33,22 +33,22 @@
 // });
   
 //PATH MODULES
-  const directory = '/user/local'
-  const fileName = 'example.txt'
-  const fullpath = path.join(directory, fileName)
-  console.log(fullpath);
+//   const directory = '/user/local'
+//   const fileName = 'example.txt'
+//   const fullpath = path.join(directory, fileName)
+//   console.log(fullpath);
 
-//OS MODULES
+// //OS MODULES
 
-// console.log('platform:', os.platform());
-//  console.log('architecture:', os.arch());
-//  console.log('total memory:', os.totalmem());
+//  console.log('platform:', os.platform());
+// console.log('architecture:', os.arch());
+// console.log('total memory:', os.totalmem());
 // console.log('free memory:', os.freemem());
 
-// //const myUrl=new URL('http://example.com:8080/path/name?query=hello#hash')
-// //console.log('host' ,myUrl.host);
-// //console.log('pathname' ,myUrl.pathname);
-// //console.log('search params' ,myUrl.searchParams.get('query'));
+const myUrl=new URL('http://example.com:8080/path/name?query=hello#hash')
+console.log('host' ,myUrl.host);
+console.log('pathname' ,myUrl.pathname);
+console.log('search params' ,myUrl.searchParams.get('query'));
 
 // //const hash=crypto.createHash('sha256')//type of the hash
 // //hash.update('Hello, NodeJs')//the message to update
