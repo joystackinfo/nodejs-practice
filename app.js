@@ -3,9 +3,9 @@
  //const path = require('path')
  //const os=require('os')
  //const url =require('url')
-const crypto=require('crypto')
-//  const sayHello = require ('./greetings')
-//  const math=require('./math')
+//const crypto=require('crypto')
+//const sayHello = require ('./greetings')
+//const math=require('./math')
 //  const lodash= require('lodash');
 
 // fs.readFile('example.txt', 'utf8', (err, data) => {  // to read the file
@@ -52,17 +52,20 @@ const crypto=require('crypto')
 // console.log('pathname' ,myUrl.pathname);
 // console.log('search params' ,myUrl.searchParams.get('query'));
 
-//CRYPTO
-//  const hash=crypto.createHash('sha256')
-//  hash.update('Hello, World!')
-//  console.log('Hash:', hash.digest('hex'));
+//CRYPTO (create a cryptographic hash)
+  //const hash=crypto.createHash('sha256')
+  //hash.update('Hello, World!')
+// console.log('Hash:', hash.digest('hex'));
 
-//EXPORTING MULTIPLE MUDOLES
+// SEND  MESSAGE.
 
- const message= sayHello('DEVELOPER')
- console.log(message);
- console.log(math.add (4,9));
-console.log(math.multiply(4,7))
+  //const message = sayHello('DEVELOPER');
+  //console.log(message);
+
+//   //EXPORTING MULTIPLE MODULES
+//    console.log(math.add (4,9));
+//   console.log(math.multiply(4,7))
+//  console.log(math.divide(20,4));
 
 
 //   //onst numbers = [1, 2, 3, 4, 5];
