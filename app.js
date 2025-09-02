@@ -31,16 +31,19 @@
 //     res.setHeader('content-type' , 'text/plain')
 //     res.end('HELLO , NODE JS this is me trying out my new node js again and again')
 // });
+  
+//PATH MODULES
+  const directory = '/user/local'
+  const fileName = 'example.txt'
+  const fullpath = path.join(directory, fileName)
+  console.log(fullpath);
 
-  // const directory = '/user/local'
-  // const fileName = 'example.txt'
-  // const fullpath = path.join(directory, fileName)
-  // console.log(fullpath);
+//OS MODULES
 
-// //console.log('platform:', os.platform());
-// //console.log('architecture:', os.arch());
-// //console.log('total memory:', os.totalmem());
-// //console.log('free memory:', os.freemem());
+// console.log('platform:', os.platform());
+//  console.log('architecture:', os.arch());
+//  console.log('total memory:', os.totalmem());
+// console.log('free memory:', os.freemem());
 
 // //const myUrl=new URL('http://example.com:8080/path/name?query=hello#hash')
 // //console.log('host' ,myUrl.host);
