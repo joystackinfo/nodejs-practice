@@ -2,8 +2,8 @@
 // const   http=require('http')
  //const path = require('path')
  //const os=require('os')
- const url =require('url')
-// const crypto=require('crypto')
+ //const url =require('url')
+const crypto=require('crypto')
 //  const sayHello = require ('./greetings')
 //  const math=require('./math')
 //  const lodash= require('lodash');
@@ -45,18 +45,21 @@
 // console.log('total memory:', os.totalmem());
 // console.log('free memory:', os.freemem());
 
-const myUrl=new URL('http://example.com:8080/path/name?query=hello#hash')
-console.log('host' ,myUrl.host);
-console.log('pathname' ,myUrl.pathname);
-console.log('search params' ,myUrl.searchParams.get('query'));
+//URL
 
-// //const hash=crypto.createHash('sha256')//type of the hash
-// //hash.update('Hello, NodeJs')//the message to update
-// //console.log(hash.digest('hex'))//to finalize
+// const myUrl=new URL('http://example.com:8080/path/name?query=hello#hash')
+// console.log('host' ,myUrl.host);
+// console.log('pathname' ,myUrl.pathname);
+// console.log('search params' ,myUrl.searchParams.get('query'));
 
-// //const message= sayHello('DEVELOPER')
-// //console.log(message);
-// //console.log(math.add (4,9));
+//CRYPTO
+ const hash=crypto.createHash('sha256')
+ hash.update('Hello, World!')
+ console.log('Hash:', hash.digest('hex'));
+
+// const message= sayHello('DEVELOPER')
+// console.log(message);
+// console.log(math.add (4,9));
 // //console.log(math.multiply(4,7))
 
 
