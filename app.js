@@ -1,7 +1,7 @@
  //const fs=require('fs')
- const   http=require('http')
-//  const path = require('path')
-//  const os=require('os'
+// const   http=require('http')
+ const path = require('path')
+//  const os=require('os')
 //  const url =require('url')
 // const crypto=require('crypto')
 //  const sayHello = require ('./greetings')
@@ -26,19 +26,16 @@
 
 // CREATE A HTTP SERVER IN THE NODE JS
 
-const server=http.createServer((req,res) => { 
-    res.statusCode=200
-    res.setHeader('content-type' , 'text/plain')
-    res.end('HELLO , NODE JS this is me trying out my new node js again and again')
-});
-server.listen(3000,() => {
-    console.log('Server running at http://localhost:3000/');
-});
+// const server=http.createServer((req, res) => {
+//     res.statusCode=200
+//     res.setHeader('content-type' , 'text/plain')
+//     res.end('HELLO , NODE JS this is me trying out my new node js again and again')
+// });
 
-// //const directory = '/user/local'
-// //const fileName = 'example.txt'
-// //const fullpath = path.join(directory, fileName)
-// //console.log(fullpath);
+  // const directory = '/user/local'
+  // const fileName = 'example.txt'
+  // const fullpath = path.join(directory, fileName)
+  // console.log(fullpath);
 
 // //console.log('platform:', os.platform());
 // //console.log('architecture:', os.arch());
