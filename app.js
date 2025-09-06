@@ -173,6 +173,10 @@
 //     }
 //       console.log('Directory renamed successfully');
 //  })
+
+
+//FS.STAT
+
 //  fs.stat('./' , (err, stats) => {
 //      if (err) {
 //         return console.error('Error getting directory stats:', err);
