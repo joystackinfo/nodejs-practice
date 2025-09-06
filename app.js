@@ -6,7 +6,7 @@
 //const crypto=require('crypto')
 //const sayHello = require ('./greetings')
 //const math=require('./math')
-//  const lodash= require('lodash');
+  const lodash= require('lodash');
 
 // fs.readFile('example.txt', 'utf8', (err, data) => {  // to read the file
 //   if (err) {
@@ -182,12 +182,12 @@
 //        console.log('is directory:', stats.isDirectory());
 //     });
 
-// fs.watch('./', (eventType, filename) => {
-//     console.log(`event: ${eventType}`);
-//     if (filename) {
-//         console.log(`Filename: ${filename}`);
-//     }
-// });
+ fs.watch('./', (eventType, filename) => {
+     console.log(`event: ${eventType}`);
+    if (filename) {
+         console.log(`Filename: ${filename}`);
+    }
+ });
 
 
 
