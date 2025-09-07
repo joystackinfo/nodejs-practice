@@ -21,11 +21,11 @@ const server = http.createServer((req, res) => {
         });
     } else {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end("Route not seen");
+        res.end("Route not found");
     }
 });
 
 const PORT = 3000;
 server.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+    console.log(`Server running at  http://localhost:${PORT}`);
 });
