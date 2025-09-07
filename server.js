@@ -1,3 +1,4 @@
+ //creating a simple http sever that post form of data and  returns te parsed data as a json response
 const http = require('http');
 const querystring = require('querystring');
 
@@ -20,7 +21,7 @@ const server = http.createServer((req, res) => {
         });
     } else {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end("Route not found");
+        res.end("Route not seen");
     }
 });
 
